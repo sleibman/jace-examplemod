@@ -12,7 +12,7 @@ public class ModItems {
 	static Item saltyItem;
 	
 	public static void init() {
-		saltyItem = new ItemSalt("salty_item");
+		saltyItem = new SaltyItem("salty_item");
 	}
 
 	

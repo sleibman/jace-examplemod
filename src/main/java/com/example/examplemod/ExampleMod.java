@@ -52,7 +52,7 @@ public class ExampleMod
 		
 
 		// Let's make some salt
-		salt = new ItemSalt("Jace salt");
+		salt = new SaltyItem("salty_item");
 		IForgeRegistry<Item> itemRegistry = GameRegistry.findRegistry(Item.class);
 		if (itemRegistry == null) {
             System.out.println("itemRegistry is null");
