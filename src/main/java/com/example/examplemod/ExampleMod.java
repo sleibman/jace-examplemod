@@ -27,7 +27,7 @@ public class ExampleMod
 	private static Logger logger;
 	
 
-	public static Item salt;
+	public static Item saltyItem;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -49,19 +49,19 @@ public class ExampleMod
 		MinecraftForge.EVENT_BUS.register(new BlockPlaceMessage());
 		logger.info("maybe just registered event handler?");
 		
-		
-
-		// Let's make some salt
-		salt = new SaltyItem("salty_item");
-		IForgeRegistry<Item> itemRegistry = GameRegistry.findRegistry(Item.class);
-		if (itemRegistry == null) {
-            System.out.println("itemRegistry is null");
-        } else { 
-            System.out.println("itemRegistry is not null");
-        }
-		
-		itemRegistry.register(salt);
-		System.out.println("we *think* we just registered salt");
+//		
+//
+//		// Let's make some salt
+//		saltyItem = new ItemSalt("saltyItem");
+//		IForgeRegistry<Item> itemRegistry = GameRegistry.findRegistry(Item.class);
+//		if (itemRegistry == null) {
+//            System.out.println("itemRegistry is null");
+//        } else { 
+//            System.out.println("itemRegistry is not null");
+//        }
+//		
+//		itemRegistry.register(saltyItem);
+//		System.out.println("we *think* we just registered salt");
 	}
 
 }

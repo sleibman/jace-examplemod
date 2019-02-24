@@ -2,9 +2,9 @@ package com.example.examplemod;
 
 import net.minecraft.item.Item;
 
-public class SaltyItem extends Item {	
+public class ItemSalt extends Item {	
 	
-	public SaltyItem(String name) {
+	public ItemSalt(String name) {
 		setUnlocalizedName(name);
 		setRegistryName(name);
 	}
