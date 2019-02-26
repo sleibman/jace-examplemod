@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "examplemod:items/salty_item"
+        "layer0": "examplemod:items/saltyitem"
      },
      
     "display": {
