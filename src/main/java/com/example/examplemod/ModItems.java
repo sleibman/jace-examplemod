@@ -1,5 +1,6 @@
 package com.example.examplemod;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -13,19 +14,26 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ModItems {
 	
 	static Item saltyItem;
-	
+	static Item tutorialItem;
+	static Item tutorialDust;
 	public static void init() {
 		saltyItem = new ItemSalt("saltyItem");
+		tutorialItem = new ItemBasic("tutorialItem").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(32);
+		tutorialDust = new ItemBasic("tutorialDust").setCreativeTab(CreativeTabs.MATERIALS);
 	}
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(saltyItem);
+		event.getRegistry().registerAll(tutorialItem, tutorialDust);
 	}
 	
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event) {
 		registerRender(saltyItem);
+		registerRender(tutorialItem);
+		registerRender(tutorialDust);
+
 	}
 	
 	private static void registerRender(Item item) {

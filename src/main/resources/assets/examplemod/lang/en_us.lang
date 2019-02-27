@@ -1,2 +1,5 @@
 item.saltyItem.name=Loaf of Salt
 tile.salty_block.name=Block of Salt
+item.tutorialDust.name=Uranium Dust
+tile.tutorialOre.name=Uranium Ore
+tile.tutorialOreMultiple.name=Rare Uranium Ore
